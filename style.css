@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: hsl(0, 100%, 74%);
+  background-image: url("images/bg-intro-desktop.png");
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  min-height: 100vh;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  margin: 0 auto;
+}
+.container .leftSide {
+  color: white;
+  width: 550px;
+}
+.container .leftSide .bold {
+  font-weight: 700;
+  font-size: 50px;
+}
+.container .rightSide {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 500px;
+  text-align: center;
+}
+.container .rightSide .trial {
+  background-color: hsl(248, 32%, 49%);
+  color: white;
+  border-radius: 8px;
+  box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+  padding: 20px 50px;
+}
+.container .rightSide .trial .bold {
+  font-weight: 600;
+}
+.container .rightSide form {
+  background-color: white;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px;
+  color: hsl(246, 25%, 77%);
+}
+.container .rightSide form input {
+  border-radius: 4px;
+  border: 1px solid hsl(246, 25%, 77%);
+  color: hsl(249, 10%, 26%);
+  font-weight: 700;
+  padding: 20px;
+  caret-color: hsl(248, 32%, 49%);
+}
+.container .rightSide form input:focus {
+  border: 1px solid hsl(248, 32%, 49%);
+  outline: none;
+}
+.container .rightSide form .FnameError, .container .rightSide form .LnameError, .container .rightSide form .EmailError, .container .rightSide form .PassError {
+  color: hsl(0, 100%, 74%);
+  font-weight: 600;
+  margin-top: -15px;
+  margin-left: auto;
+}
+.container .rightSide form input[type=submit] {
+  background-color: hsl(154, 59%, 51%);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 600;
+  height: 40px;
+  letter-spacing: 1px;
+  box-shadow: 0 4px hsl(154, 57%, 45%);
+  text-align: center;
+  line-height: 10px;
+}
+.container .rightSide form input[type=submit]:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+.container .rightSide form div {
+  font-size: 12px;
+}
+.container .rightSide form div span {
+  color: hsl(0, 100%, 74%);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 20px 50px;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .container .leftSide {
+    color: white;
+    width: 380px;
+    text-align: center;
+  }
+  .container .leftSide .bold {
+    font-weight: 600;
+    font-size: 30px;
+  }
+  .container .rightSide {
+    width: 360px;
+  }
+  .container .rightSide .trial {
+    padding: 20px 60px;
+  }
+}/*# sourceMappingURL=style.css.map */

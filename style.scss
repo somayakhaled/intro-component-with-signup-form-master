@@ -1,0 +1,147 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+$Red: hsl(0, 100%, 74%);
+$Green: hsl(154, 59%, 51%);
+$Blue: hsl(248, 32%, 49%);
+$Dark_Blue: hsl(249, 10%, 26%);
+$Grayish_Blue: hsl(246, 25%, 77%);
+
+body{
+    display: flex;  
+    justify-content: center; 
+    align-items: center;
+    background-color: $Red;
+    background-image: url("images/bg-intro-desktop.png");
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    margin: 0 auto;
+
+    .leftSide{
+        color: white;
+        width: 550px;
+
+        .bold{
+            font-weight: 700;
+            font-size: 50px;
+        }
+    }
+
+    .rightSide{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 500px;
+        text-align: center;
+
+        .trial{
+            background-color: $Blue;
+            color: white;
+            border-radius: 8px;
+            box-shadow: 0 5px rgba(0, 0, 0, 0.1);
+            padding: 20px 50px;
+
+            .bold{
+                font-weight: 600;
+            }
+        }
+
+        form{
+            background-color: white;
+            border-radius: 8px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding: 30px;
+            color: $Grayish_Blue;
+
+            input{
+                border-radius: 4px;
+                border: 1px solid $Grayish_Blue;
+                color: $Dark_Blue;
+                font-weight: 700;
+                padding: 20px;
+                caret-color: $Blue;
+                
+                &:focus{  
+                    border: 1px solid $Blue;  
+                    outline: none;
+                  }
+            } 
+
+            .FnameError, .LnameError, .EmailError, .PassError{
+                color: $Red;
+                font-weight: 600;
+                margin-top: -15px;
+                margin-left: auto;
+            }
+
+            input[type="submit"]{
+                background-color: $Green;
+                border: none;
+                border-radius: 6px;
+                color: white;
+                text-transform: uppercase;
+                font-weight: 600;
+                height: 40px;
+                letter-spacing: 1px;
+                box-shadow: 0 4px hsl(154, 57%, 45%);
+                text-align: center;
+                line-height: 10px;
+
+                &:hover{
+                    cursor: pointer;
+                    opacity: 0.8;
+                }
+            }
+
+            div{
+                font-size: 12px;
+
+                span{
+                    color: $Red;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    body{
+        padding: 20px 50px;
+    }
+
+    .container{
+        flex-direction: column;
+
+        .leftSide{
+            color: white;
+            width: 380px;
+            text-align: center;
+    
+            .bold{
+                font-weight: 600;
+                font-size: 30px;
+            }
+        }
+
+        .rightSide{
+            width: 360px;
+
+            .trial{
+            padding: 20px 60px;
+            }
+        }
+    }
+}
